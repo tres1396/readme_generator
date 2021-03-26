@@ -69,7 +69,7 @@ inquirer
         ${answer.tableOfContents}
         ## Usage
         ${answer.usage}
-        ##`
+        ## License`
         
 
         fs.writeFile("./readme.md", README, () => {});
