@@ -64,14 +64,19 @@ inquirer
         ## Installation
         ${answers.installation}
         ## Description
-        ${answer.description}
+        ${answers.description}
         ## Table of Contents
-        ${answer.tableOfContents}
+        ${answers.tableOfContents}
         ## Usage
-        ${answer.usage}
+        ${answers.usage}
         ## License
-        ${answers}
-        ## `
+        ${answers.license}
+        ## Contributing
+        ${answers.contributing}
+        ## Tests
+        ${answers.tests}
+        ## Questions
+        ${answers.questions}`
         
 
         fs.writeFile("./readme.md", README, () => {});
