@@ -62,14 +62,16 @@ inquirer
         `# Title
         ${answers.title}
         ## Installation
-        ${answer.installation}
+        ${answers.installation}
         ## Description
         ${answer.description}
         ## Table of Contents
         ${answer.tableOfContents}
         ## Usage
         ${answer.usage}
-        ## License`
+        ## License
+        ${answers}
+        ## `
         
 
         fs.writeFile("./readme.md", README, () => {});
