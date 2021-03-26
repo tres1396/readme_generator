@@ -13,6 +13,11 @@ inquirer
         },
         {
             type: "input",
+            message: "What was installed for the project?",
+            name: "installation"
+        },
+        {
+            type: "input",
             message: "Describe your project.",
             name: "description"
         },
@@ -52,6 +57,13 @@ inquirer
 .then(answers => {
      fs.writeFile('./answers.json', JSON.stringify(answers), () => {});
         console.log(answers);
+
+        const README = 
+        `# Title
+        ${answers.title}
+        ## `
+
+        fs.writeFile("./readme.md", README, () => {});
 })
 
 // TODO: Create a function to write README file
