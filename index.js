@@ -61,7 +61,14 @@ inquirer
         const README = 
         `# Title
         ${answers.title}
-        ## `
+        ## Installation
+        ${answer.installation}
+        ## Description
+        ${answer.description}
+        ## Table of Contents
+        ${answer.tableOfContents}
+        ## Usage
+        ${answer.usage}`
 
         fs.writeFile("./readme.md", README, () => {});
 })
