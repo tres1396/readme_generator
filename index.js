@@ -68,7 +68,9 @@ inquirer
         ## Table of Contents
         ${answer.tableOfContents}
         ## Usage
-        ${answer.usage}`
+        ${answer.usage}
+        ##`
+        
 
         fs.writeFile("./readme.md", README, () => {});
 })
