@@ -3,7 +3,18 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// TODO: Create an array of questions for user input
+/*
+function renderLicenseBadge(license) {
+    if (answers.license === "Apache") {
+      return (img.shields.io/badge/license-Apache-orange)
+    } else {
+      if (answers.license === "") {
+      return ("No license used")
+      }
+    }
+  };
+*/
+
 inquirer
     .prompt ([
         {
@@ -47,7 +58,7 @@ inquirer
             message: "Enter your github username",
             name: "questions"
         },          
-//const questions = [];
+
 ])
 
 .then(answers => {
@@ -55,7 +66,8 @@ inquirer
         console.log(answers);
 
         const README = 
-`# ${answers.title}
+`
+# ${answers.title}
 
 ## Table of Contents
 * [Installation](#installation)
@@ -85,24 +97,11 @@ ${answers.contributing}
 ${answers.tests}
 
 ## Questions
-If you have any questions, please find me on Github at github.com/${answers.questions}, and reach out to the email address listed there.`;
+If you have any questions, please find me on Github [here](github.com/${answers.questions}), and reach out to the email address listed there.`;
         
 
         fs.writeFile("./readme.md", README, () => {});
 })
 
 
-const addBadge = function() {
-    if (answers.license = Apache) {
-
-    }
-} 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
 
