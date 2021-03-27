@@ -11,22 +11,22 @@
 * [Questions](#questions)
 
 ## Installation
-INquirer
+Inquirer
 
 ## Description
-This is a readme generator that can be used for development projects using command line.
+This is a readme generator that uses command line to fill out a readme.me document
 
 ## Usage
-Create a readme document
+This can be used to create readme files for development projects
 
 ## License
-GNU,Mozilla
+Mozilla
 
 ## Contributing
 Tre
 
 ## Tests
-General testing
+General testing during development
 
 ## Questions
 If you have any questions, please find me on Github [here](github.com/tres1396), and reach out to the email address listed there.
