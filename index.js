@@ -32,7 +32,8 @@ inquirer
             name: "usage"
         },  
         {
-            type: "input",
+            type: "checkbox",
+            choices: ["Apache", "Creative Commons", "Eclipse", "GNU", "Mozilla", "MIT"],
             message: "What license is being used?",
             name: "license"
         },     
@@ -59,24 +60,24 @@ inquirer
         console.log(answers);
 
         const README = 
-        `# Title
-        ${answers.title}
-        ## Installation
-        ${answers.installation}
-        ## Description
-        ${answers.description}
-        ## Table of Contents
-        ${answers.tableOfContents}
-        ## Usage
-        ${answers.usage}
-        ## License
-        ${answers.license}
-        ## Contributing
-        ${answers.contributing}
-        ## Tests
-        ${answers.tests}
-        ## Questions
-        ${answers.questions}`
+`# Title
+${answers.title}
+## Installation
+${answers.installation}
+## Description
+${answers.description}
+## Table of Contents
+${answers.tableOfContents}
+## Usage
+${answers.usage}
+## License
+${answers.license}
+## Contributing
+${answers.contributing}
+## Tests
+${answers.tests}
+## Questions
+${answers.questions}`
         
 
         fs.writeFile("./readme.md", README, () => {});
