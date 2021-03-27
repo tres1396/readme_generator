@@ -23,11 +23,6 @@ inquirer
         },
         {
             type: "input",
-            message: "List the table of contents.",
-            name: "tableOfContents"
-        },  
-        {
-            type: "input",
             message: "What is the usage of this project?",
             name: "usage"
         },  
@@ -49,7 +44,7 @@ inquirer
         },
         {
             type: "input",
-            message: "What questions are there?",
+            message: "Enter your github username",
             name: "questions"
         },          
 //const questions = [];
@@ -60,29 +55,48 @@ inquirer
         console.log(answers);
 
         const README = 
-`# Title
-${answers.title}
+`# ${answers.title}
+
+## Table of Contents
+* [Installation](#installation)
+* [Description](#description)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
 ## Installation
 ${answers.installation}
+
 ## Description
 ${answers.description}
-## Table of Contents
-${answers.tableOfContents}
+
 ## Usage
 ${answers.usage}
+
 ## License
 ${answers.license}
+
 ## Contributing
 ${answers.contributing}
+
 ## Tests
 ${answers.tests}
+
 ## Questions
-${answers.questions}`
+If you have any questions, please find me on Github at github.com/${answers.questions}, and reach out to the email address listed there.`;
         
 
         fs.writeFile("./readme.md", README, () => {});
 })
 
+
+const addBadge = function() {
+    if (answers.license = Apache) {
+
+    }
+} 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
